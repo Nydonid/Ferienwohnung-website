@@ -1,0 +1,113 @@
+.box-container-information {
+    grid-area: box-container-information;
+}
+
+
+/* Media Query für Phone */
+@media screen and (min-width: 0px) {
+    .nav ol {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav a {
+        width: auto;
+        margin: auto;
+        padding: 5px 20px 5px 20px;
+        display: block;
+        text-decoration: none;
+        border: 1px solid white;
+        background-color: lightgray;
+        color: black;
+    }
+}
+
+/* Media Query für Tablet */
+@media screen and (min-width: 721px) {
+    .nav ol {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav a {
+        width: auto;
+        margin: auto;
+        padding: 5px 20px 5px 20px;
+        display: block;
+        text-decoration: none;
+        border: 1px solid white;
+        background-color: lightgray;
+        color: black;
+    }
+
+    .box-container-information>ul {
+        columns: 100px 2;
+    }
+
+    .box-container-facilities {
+        columns: 100px 2;
+    }
+
+    .box-container-neighbourhood {
+        columns: 100px 2;
+    }
+
+    .box-container-extras {
+        columns: 100px 2;
+    }
+
+    .box-container-payment {
+        columns: 100px 2;
+    }
+}
+
+/* Media Query für Desktop */
+@media screen and (min-width: 1261px) {
+    .nav ol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav a {
+        width: auto;
+        margin: auto;
+        padding: 10px 100px 5px 20px;
+        display: block;
+        text-decoration: none;
+        border: 1px solid white;
+        background-color: lightgray;
+        color: black;
+    }
+
+    .box-container-information>ul {
+        columns: 100px 2;
+    }
+
+    .box-container-facilities {
+        columns: 100px 2;
+    }
+
+    .box-container-neighbourhood {
+        columns: 100px 2;
+    }
+
+    .box-container-extras {
+        columns: 100px 2;
+    }
+
+    .box-container-payment {
+        columns: 100px 2;
+    }
+}

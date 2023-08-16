@@ -1,0 +1,51 @@
+.header {
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.main {
+    grid-area: main;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+/* Media Query für Phone */
+@media screen and (min-width: 0px) {}
+
+
+/* Media Query für Tablet */
+@media screen and (min-width: 721px) {
+    .app-container {
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        grid-template-rows: 100px 300px 1fr 80px;
+        grid-template-areas:
+            "header header"
+            "nav main"
+            "aside main"
+            "footer footer";
+    }
+}
+
+/* Media Query für Desktop */
+@media screen and (min-width: 1261px) {
+    .app-container {
+        display: grid;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: 100px 60px 1fr 80px;
+        grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "main main aside"
+            "footer footer footer";
+    }
+}

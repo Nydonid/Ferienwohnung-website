@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<!-- clemens.meier@ost.ch
+ senden!!!-->
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chesa Palüds Ferienwohnung</title>
+    <!-- Stylesheet CSS Files-->
+    <link rel="stylesheet" href="styles-main-grid.css">
+    <link rel="stylesheet" href="styles-cosmetics.css">
+    <link rel="stylesheet" href="styles-box-grid.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header mit Logo -->
+        <header class="header">Chesa Palüds Ferienwohnung<br></header>
+        <!-- Navigationslinks -->
+        <nav class="nav">
+            <ol>
+                <li><a href="#article1">Information</a></li>
+                <!--                 <li><a href="#article2">Buchen</a></li>
+ -->
+                <li><a href="#article3">Lage</a></li>
+                <li><a href="#article4">Beschreibung</a></li>
+                <li><a href="#article5">Kontakt</a></li>
+
+            </ol>
+        </nav>
+        <!-- Hauptinhalte -->
+        <main class="main">
+            <article class="article" id="article0">
+                <!-- most copy paste -->
+                <div id="pic-container">
+                    <img alt="img1" class="mySlides" src="img1.jpg">
+                    <img alt="img2" class="mySlides" src="img1.jpg">
+                    <img alt="img3" class="mySlides" src="img1.jpg">
+                    <img alt="img4" class="mySlides" src="img1.jpg">
+                    <img alt="img5" class="mySlides" src="img1.jpg">
+                    <img alt="img6" class="mySlides" src="img1.jpg">
+                    <img alt="img7" class="mySlides" src="img1.jpg">
+                    <img alt="img8" class="mySlides" src="img1.jpg">
+                    <img alt="img9" class="mySlides" src="img1.jpg">
+                    <img alt="img10" class="mySlides" src="img1.jpg">
+                </div>
+                <!--                   <div id="pic-button-container">
+                    <button type="button" class="button-img" onclick="plusDivs(-1)">&#10094;</button>
+                    <button type="button" class="button-img" onclick="plusDivs(1)">&#10095;</button>
+                </div> -->
+                <!-- all copy paste with js-->
+                <script>
+                    var slideIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        slideIndex++;
+                        if (slideIndex > x.length) { slideIndex = 1 }
+                        x[slideIndex - 1].style.display = "block";
+                        setTimeout(carousel, 5000); // Change image every 5 seconds automatic
+                    }
+                </script>
+                <!-- end copy paste somewhat with js-->
+                <div id="main-title">
+                    <h1>Chesa Palüds</h1>
+                    <h4>7513 Silvaplana-Surlej</h4>
+                    <h3>Ferienwohnung 42m<sup>2</sup></h3>
+                </div>
+            </article>
+            <article class="article" id="article1">
+                <h1>Information</h1>
+                <div class="box-container-information">
+                    <ul>
+                        <li>Für 2 Personen</li>
+                        <li>42m<sup>2</sup></li>
+                        <li>Bauernhof</li>
+                        <li>Wunderschöne Aussicht</li>
+                        <li>Mitten im Tal</li>
+                        <li>Neu und modern</li>
+                        <li>Rauchen und Haustiere untersagt</li>
+                    </ul>
+                </div>
+                <h1>Ausstattung</h1>
+                <div class="box-container-facilities">
+                    <ul>
+                        <li>1 Schlafzimmer</li>
+                        <li>1 Badezimmer</li>
+                        <li>Gratis-Parkplatz</li>
+                        <li>Geschirrspüler</li>
+                        <li>Waschmaschine und Tumbler</li>
+                        <li>Fernseher</li>
+                        <li>Schnelles W-LAN</li>
+                        <li>Vollausgestatte Küche</li>
+                        <li>Badezimmer</li>
+                        <li>Kinderbett</li>
+                        <li>Garten</li>
+                    </ul>
+                </div>
+                <h1>Umgebung</h1>
+                <div class="box-container-neighbourhood">
+                    <ul>
+                        <li>Bushaltestelle</li>
+                        <li>100m</li>
+                        <li>See</li>
+                        <li>250m</li>
+                        <li>Skifahren</li>
+                        <li>700m</li>
+                        <li>Dorfzentrum</li>
+                        <li>1000m</li>
+                        <li>Einkaufen im Volg</li>
+                        <li>1000m</li>
+                        <li>Kiten und Windsurfen</li>
+                        <li>1000m</li>
+                        <li>Angeln</li>
+                        <li>Gleitschirmfliegen</li>
+                        <li>Fahrrad, Ski, Snowboardverleih</li>
+                    </ul>
+                </div>
+                <h1>Extras</h1>
+                <div class="box-container-extras">
+                    <ul>
+                        <li>Frische BIO-Milch</li>
+                        <li>Platz für Fahrräder und sonstige Ausrüstung</li>
+                        <li>Spielsachen</li>
+                    </ul>
+                </div>
+                <h1>Bezahlung</h1>
+                <div class="box-container-payment">
+                    <ul>
+                        <li>Kreditkarte</li>
+                        <li>Auf Rechung</li>
+                        <li>Barzahlung vor Ort</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="article" id="article3">
+                <h1>Lage</h1>
+                <iframe title="map" id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.102392509922!2d9.805265228517312!3d46.460394798186705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47837e21a8d68835%3A0x4757fed8ef5982ac!2sVia%20d&#39;Immez%203%2C%207513%20Silvaplana-Surlej!5e0!3m2!1sde!2sch!4v1691743350372!5m2!1sde!2sch"
+                    width="600" height="450" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+            <article class="article" id="article4">
+                <h1>Beschreibung</h1>
+                <div class="box-container.description">
+                    <p><strong>Informationen über die Wohnungseinheit</strong>
+                        <br>
+                        <br>
+                        Diese Berge - diese Seen - dieses Licht!
+                        Bei uns sind Sie mittendrin in dieser unglaublichen Szenerie. Geniessen Sie ihre Ferien mit
+                        einer einzigartigen Aussicht und einem spektakulären Sonnenuntergang.
+                        <br>
+                        <strong>Innenbereich:</strong>
+                        <br>
+                        Die 2-Zimmer-Wohnung (42 m²) liegt im 1. Stock. Die Wohnung ist neu, modern und gemütlich
+                        eingerichtet, im Schlafzimmer gibt es ein Doppelbett (180x200). Im Wohn-Esszimmer kann das Sofa
+                        auch als Bett benützt werden.Flachbildschirm und Radio. Die Küche ist pflegeleicht in Ahorndekor
+                        und hat eine Granitabdeckung mit Glaskeramikherd, Backofen, Kühlschrank und Nespresso
+                        Kaffeemaschine. Im Wohn- und Schlafzimmer gibt es Parkettboden. Das Bad ist mit Dusche/WC/Lavabo
+                        ausgestattet. Bett- Küchen und Frotteewäsche ist vorhanden.
+                        <br>
+                        <strong>Haus und Aussenbereich:</strong>
+                        <br>
+                        Die Chesa Palüds liegt mitten in der unverbauten Ebene von Surlej mit direkter Sicht auf das
+                        Schloss Crap da Sass.
+                        Platz für ihre Sportausrüstung oder ihr Bike ist genügend verfügbar.
+                        Direkter Anschluss an die Langlaufloipe. Im Winter haben wir für Sie einen gedeckten Platz für
+                        ihr Auto.
+                        Im Sommer ist ein kleiner Gartensitzplatz zur Gemeinschaftsbenützung vorhanden.
+                        Zur Bushaltestelle sind es 100m
+                        Kinderbett, Triptrap, und Spielsachen sind bei uns kostenlos erhältlich.
+                        Selbstverständlich ist auch das WLAN inbegriffen.
+                        Haustiere sind nicht erlaubt. Zudem sind wir ein Nichtraucherhaus.
+                        Kurzaufenthalte sind auf Anfrage möglich.
+                        Wir sind eine einheimische Bauernfamilie und betreiben Milchwirtschaft. Somit bieten wir ihnen
+                        gerne auch unsere herrliche BIO-Frischmilch gratis an.
+                    </p>
+                </div>
+            </article>
+            <article class="article" id="article5">
+                <h1>Kontakt</h1>
+                <div class="box-container.contact">
+                    <p>Telefon:</p><a href="tel:+41 79 398 05 67">+41&nbsp;79&nbsp;398&nbsp;05&nbsp;67</a>
+                    <p>E-Mail:</p><a href="mailto:happymoo@bluewin.ch">happymoo@bluewin.ch</a>
+                    <p>Adresse: <br><br> Pia + Roman Stettler <br> Via d'Immez 3 <br> 7513 Silvaplana-Surlej </p>
+                </div>
+            </article>
+        </main>
+        <!-- Aside mit ''Buchungsfenster'' und Hauptinfo -->
+        <div id="aside-container">
+            <aside class="aside">
+                <blockquote id="box-book">
+                    <h1>Buchen</h1>
+                    <h5>42m<sup>2</sup> Ferienwohnung</h5>
+                    <p>Via d'Immez 3</p>
+                    <p>7513 Silvaplana-Surlej</p>
+                    <br>
+                    <p>2 Personen - 1 Schlafzimmer</p>
+                    <h4><strong>Preis pro Nacht</strong> ab 109 CHF</h4>
+                    <p>Jetzt per E-Mail buchen:</p><a href="mailto:happymoo@bluewin.ch">happymoo@bluewin.ch</a>
+                </blockquote>
+            </aside>
+        </div>
+        <!-- Fusszeile mit Kontakt -->
+        <footer class="footer">&copy; 2023 by Mattia Stettler <br>
+        </footer>
+    </div>
+</body>
+
+</html>
