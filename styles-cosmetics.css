@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(118, 148, 119);
+    background: linear-gradient(160deg, rgb(45, 155, 30), rgba(111, 143, 99, 0.9), rgba(194, 255, 192, 0.8));
     display: flex;
     justify-content: center;
 }
@@ -12,30 +12,32 @@ body {
 }
 
 .header {
-    height: 40px;
+    height: 100px;
     color: #fefff2;
-    font-size: larger;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium';
     padding: 15px;
-    margin: 5px 5px 0px 5px;
+    display: flex;
+    justify-content: space-between;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: #4c8f65;
 }
 
+#logo-header {}
+
 .footer {
     color: #fefff2;
     padding: 10px;
-    margin: 5px;
-
     text-align: center;
     background-color: #4c8f65;
+    border-radius: 20px;
 }
 
 .nav {
     background-color: #fefff2;
     top: 0;
     padding: 10px;
-    margin: -15px 5px 5px 5px;
     border-radius: 20px;
 }
 
@@ -46,27 +48,12 @@ body {
 
 .nav a:hover {
     background-color: #4c8f65;
+    color: #fefff2;
 }
-
-.aside {
-    background-color: #fefff2;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 20px;
-    position: sticky;
-    top: 20px;
-}
-
 
 .article {
     background-color: #fefff2;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 20px;
-}
-
-.mySlides {
-    width: 60%;
+    padding: 50px;
     border-radius: 20px;
 }
 
@@ -75,22 +62,48 @@ body {
     justify-content: center;
 }
 
-#pic-button-container {
+.mySlides {
     display: flex;
     justify-content: center;
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid;
+    border-color: #555746;
+}
+
+#pic-button-container {
+    display: flex;
+    justify-content: left;
+    margin: 10px 0px 0px -5px;
+}
+
+.button-img {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #4c8f65;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin: 5px;
+    padding: 8px 32px;
 }
 
 #map {
+    display: flex;
+    justify-content: center;
     border-color: #4c8f65;
     background: #4c8f65;
     border: 10px solid;
-    border: 15px solid;
     border-radius: 20px;
+    width: 90%;
+    height: 500px;
 }
 
 #main-title {
-    margin-left: 20%;
+    margin-left: 12%;
 }
+
+
 
 .aside blockquote {
     background: #f9f9f9;
@@ -100,16 +113,8 @@ body {
     padding: 0.5em 10px;
 }
 
-.button-img {
-    background-color: #4c8f65;
-    /* Green */
-    border: none;
-    border-radius: 4px;
-    color: white;
-    padding: 8px 32px;
-}
-
-#aside-container {
-    display: flex;
-    min-height: 100vh;
+.aside {
+    background-color: #fefff2;
+    padding: 10px;
+    border-radius: 20px;
 }

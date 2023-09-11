@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 
-<!-- clemens.meier@ost.ch
- senden!!!-->
 <html lang="de">
 
 <head>
@@ -11,19 +9,20 @@
     <!-- Stylesheet CSS Files-->
     <link rel="stylesheet" href="styles-main-grid.css">
     <link rel="stylesheet" href="styles-cosmetics.css">
-    <link rel="stylesheet" href="styles-box-grid.css">
 </head>
 
 <body>
     <div class="app-container">
         <!-- Header mit Logo -->
-        <header class="header">Chesa Palüds Ferienwohnung<br></header>
+        <header class="header">Chesa Palüds Ferienwohnung<br>
+            <img alt="header_logo" id="logo-header" src="logo_header.png">
+
+        </header>
         <!-- Navigationslinks -->
         <nav class="nav">
             <ol>
                 <li><a href="#article1">Information</a></li>
-                <!--                 <li><a href="#article2">Buchen</a></li>
- -->
+                <!--  <li><a href="#article2">Buchen</a></li> -->
                 <li><a href="#article3">Lage</a></li>
                 <li><a href="#article4">Beschreibung</a></li>
                 <li><a href="#article5">Kontakt</a></li>
@@ -35,26 +34,34 @@
             <article class="article" id="article0">
                 <!-- most copy paste -->
                 <div id="pic-container">
-                    <img alt="img1" class="mySlides" src="img1.jpg">
-                    <img alt="img2" class="mySlides" src="img1.jpg">
-                    <img alt="img3" class="mySlides" src="img1.jpg">
-                    <img alt="img4" class="mySlides" src="img1.jpg">
-                    <img alt="img5" class="mySlides" src="img1.jpg">
-                    <img alt="img6" class="mySlides" src="img1.jpg">
-                    <img alt="img7" class="mySlides" src="img1.jpg">
-                    <img alt="img8" class="mySlides" src="img1.jpg">
-                    <img alt="img9" class="mySlides" src="img1.jpg">
-                    <img alt="img10" class="mySlides" src="img1.jpg">
+                    <img alt="img1_holidayflat_surlej" class="mySlides" src="img1.jpg">
+                    <img alt="img2_holidayflat_surlej" class="mySlides" src="img2.jpg">
+                    <img alt="img3_holidayflat_surlej" class="mySlides" src="img3.jpg">
+                    <img alt="img4_holidayflat_surlej" class="mySlides" src="img4.jpg">
+                    <img alt="img5_holidayflat_surlej" class="mySlides" src="img5.jpg">
+                    <img alt="img6_holidayflat_surlej" class="mySlides" src="img6.jpg">
+                    <img alt="img7_holidayflat_surlej" class="mySlides" src="img7.jpg">
+                    <img alt="img8_holidayflat_surlej" class="mySlides" src="img8.jpg">
+                    <img alt="img9_holidayflat_surlej" class="mySlides" src="img9.jpg">
                 </div>
-                <!--                   <div id="pic-button-container">
+                <div id="pic-button-container">
                     <button type="button" class="button-img" onclick="plusDivs(-1)">&#10094;</button>
                     <button type="button" class="button-img" onclick="plusDivs(1)">&#10095;</button>
-                </div> -->
-                <!-- all copy paste with js-->
+                </div>
+                <!-- all copy paste js for carousel-->
                 <script>
                     var slideIndex = 0;
-                    carousel();
+                    var timeoutID; // Store the timeout ID
 
+                    carousel(); // Start the carousel initially
+
+                    function plusDivs(n) {
+                        showSlides(slideIndex += n);
+                        clearTimeout(timeoutID); // Clear the existing timeout
+                        timeoutID = setTimeout(carousel, 8000); // Start a new timeout
+                    }
+
+                    //builds and runs the carousel 
                     function carousel() {
                         var i;
                         var x = document.getElementsByClassName("mySlides");
@@ -62,12 +69,31 @@
                             x[i].style.display = "none";
                         }
                         slideIndex++;
-                        if (slideIndex > x.length) { slideIndex = 1 }
+                        if (slideIndex > x.length) {
+                            slideIndex = 1;
+                        }
                         x[slideIndex - 1].style.display = "block";
-                        setTimeout(carousel, 5000); // Change image every 5 seconds automatic
+                        timeoutID = setTimeout(carousel, 8000); // Change image every 8 seconds automatically
+                    }
+
+                    //additional method for work of buttons ( > / < )
+                    function showSlides(n) {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        if (n > x.length) {
+                            slideIndex = 1;
+                        }
+                        if (n < 1) {
+                            slideIndex = x.length;
+                        }
+                        for (i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        x[slideIndex - 1].style.display = "block";
                     }
                 </script>
-                <!-- end copy paste somewhat with js-->
+
+                <!-- end copy paste  js for carousel-->
                 <div id="main-title">
                     <h1>Chesa Palüds</h1>
                     <h4>7513 Silvaplana-Surlej</h4>
@@ -84,14 +110,13 @@
                         <li>Wunderschöne Aussicht</li>
                         <li>Mitten im Tal</li>
                         <li>Neu und modern</li>
-                        <li>Rauchen und Haustiere untersagt</li>
+                        <li>Rauchen und Haustiere nicht gestattet</li>
                     </ul>
                 </div>
                 <h1>Ausstattung</h1>
                 <div class="box-container-facilities">
                     <ul>
                         <li>1 Schlafzimmer</li>
-                        <li>1 Badezimmer</li>
                         <li>Gratis-Parkplatz</li>
                         <li>Geschirrspüler</li>
                         <li>Waschmaschine und Tumbler</li>
@@ -99,7 +124,7 @@
                         <li>Schnelles W-LAN</li>
                         <li>Vollausgestatte Küche</li>
                         <li>Badezimmer</li>
-                        <li>Kinderbett</li>
+                        <li>Kinderbett &sol; Stuhl</li>
                         <li>Garten</li>
                     </ul>
                 </div>
@@ -134,7 +159,6 @@
                 <h1>Bezahlung</h1>
                 <div class="box-container-payment">
                     <ul>
-                        <li>Kreditkarte</li>
                         <li>Auf Rechung</li>
                         <li>Barzahlung vor Ort</li>
                     </ul>
@@ -144,8 +168,7 @@
                 <h1>Lage</h1>
                 <iframe title="map" id="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.102392509922!2d9.805265228517312!3d46.460394798186705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47837e21a8d68835%3A0x4757fed8ef5982ac!2sVia%20d&#39;Immez%203%2C%207513%20Silvaplana-Surlej!5e0!3m2!1sde!2sch!4v1691743350372!5m2!1sde!2sch"
-                    width="600" height="450" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </article>
             <article class="article" id="article4">
                 <h1>Beschreibung</h1>
@@ -194,20 +217,19 @@
             </article>
         </main>
         <!-- Aside mit ''Buchungsfenster'' und Hauptinfo -->
-        <div id="aside-container">
-            <aside class="aside">
-                <blockquote id="box-book">
-                    <h1>Buchen</h1>
-                    <h5>42m<sup>2</sup> Ferienwohnung</h5>
-                    <p>Via d'Immez 3</p>
-                    <p>7513 Silvaplana-Surlej</p>
-                    <br>
-                    <p>2 Personen - 1 Schlafzimmer</p>
-                    <h4><strong>Preis pro Nacht</strong> ab 109 CHF</h4>
-                    <p>Jetzt per E-Mail buchen:</p><a href="mailto:happymoo@bluewin.ch">happymoo@bluewin.ch</a>
-                </blockquote>
-            </aside>
-        </div>
+        <aside class="aside">
+            <blockquote id="box-book">
+                <h1>Buchen</h1>
+                <h5>42m<sup>2</sup> Ferienwohnung</h5>
+                <p>Via d'Immez 3</p>
+                <p>7513 Silvaplana-Surlej</p>
+                <br>
+                <p>2 Personen - </p>
+                <p>1 Schlafzimmer</p>
+                <h4><strong>Preis pro Nacht</strong> ab 109 CHF</h4>
+                <p>Jetzt per E-Mail buchen:</p><a href="mailto:happymoo@bluewin.ch">happymoo@bluewin.ch</a>
+            </blockquote>
+        </aside>
         <!-- Fusszeile mit Kontakt -->
         <footer class="footer">&copy; 2023 by Mattia Stettler <br>
         </footer>

@@ -18,34 +18,129 @@
     grid-area: footer;
 }
 
+.box-container-information {
+    grid-area: box-container-information;
+}
+
 /* Media Query für Phone */
-@media screen and (min-width: 0px) {}
+@media screen and (min-width: 0px) {
+    .header {
+        margin: 20px 20px 0px 20px;
+    }
 
+    .nav {
+        margin: -15px 20px 20px 20px;
+    }
 
-/* Media Query für Tablet */
-@media screen and (min-width: 721px) {
-    .app-container {
-        display: grid;
-        grid-template-columns: 20% 1fr;
-        grid-template-rows: 100px 300px 1fr 80px;
-        grid-template-areas:
-            "header header"
-            "nav main"
-            "aside main"
-            "footer footer";
+    .footer {
+        margin: 20px;
+    }
+
+    .article {
+        margin: 20px;
+    }
+
+    .aside {
+        margin: 20px;
+    }
+
+    .nav ol {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav a {
+        width: auto;
+        margin: auto;
+        padding: 5px 20px 5px 20px;
+        display: block;
+        text-decoration: none;
+        border: 1px solid white;
+        background-color: lightgray;
+        color: black;
     }
 }
 
+
+
 /* Media Query für Desktop */
-@media screen and (min-width: 1261px) {
+@media screen and (min-width: 1290px) {
     .app-container {
         display: grid;
         grid-template-columns: 20% 1fr 20%;
-        grid-template-rows: 100px 60px 1fr 80px;
+        grid-template-rows: 160px 60px 1fr 80px;
         grid-template-areas:
             "header header header"
             "nav nav nav"
             "main main aside"
             "footer footer footer";
+    }
+
+    .header {
+        margin: 20px 5px 0px 5px;
+    }
+
+    .nav {
+        margin: -30px 5px 5px 5px;
+    }
+
+    .footer {
+        margin: 5px;
+    }
+
+    .article {
+        margin: 5px;
+    }
+
+    .aside {
+        margin: 5px;
+    }
+
+    .aside blockquote {
+        position: sticky;
+    }
+
+    .nav ol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+    }
+
+    .nav a {
+        width: auto;
+        margin: auto;
+        padding: 10px 100px 5px 20px;
+        display: block;
+        text-decoration: none;
+        border: 1px solid white;
+        background-color: lightgray;
+        color: black;
+    }
+
+    .box-container-information {
+        columns: 100px 2;
+    }
+
+    .box-container-facilities {
+        columns: 100px 2;
+    }
+
+    .box-container-neighbourhood {
+        columns: 100px 2;
+    }
+
+    .box-container-extras {
+        columns: 100px 2;
+    }
+
+    .box-container-payment {
+        columns: 100px 2;
     }
 }
