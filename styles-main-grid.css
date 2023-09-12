@@ -63,6 +63,10 @@
         background-color: lightgray;
         color: black;
     }
+
+    #article0 {
+        padding: 30px 2px 30px 2px;
+    }
 }
 
 
