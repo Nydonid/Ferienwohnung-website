@@ -66,9 +66,8 @@
 
                     //builds and runs the carousel 
                     function carousel() {
-                        var i;
                         var x = document.getElementsByClassName("mySlides");
-                        for (i = 0; i < x.length; i++) {
+                        for (var i = 0; i < x.length; i++) {
                             x[i].style.display = "none";
                         }
                         slideIndex++;
@@ -81,7 +80,6 @@
 
                     //additional method for work of buttons ( > / < )
                     function showSlides(n) {
-                        var i;
                         var x = document.getElementsByClassName("mySlides");
                         if (n > x.length) {
                             slideIndex = 1;
@@ -89,7 +87,7 @@
                         if (n < 1) {
                             slideIndex = x.length;
                         }
-                        for (i = 0; i < x.length; i++) {
+                        for (var i = 0; i < x.length; i++) {
                             x[i].style.display = "none";
                         }
                         x[slideIndex - 1].style.display = "block";
@@ -168,7 +166,9 @@
                 </div>
             </article>
             <article class="article" id="article3">
-                <h1>Lage</h1>
+                <div>
+                    <h1 id="h1-map">Lage</h1>
+                </div>
                 <iframe title="map" id="map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d687.102392509922!2d9.805265228517312!3d46.460394798186705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47837e21a8d68835%3A0x4757fed8ef5982ac!2sVia%20d&#39;Immez%203%2C%207513%20Silvaplana-Surlej!5e0!3m2!1sde!2sch!4v1691743350372!5m2!1sde!2sch"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
